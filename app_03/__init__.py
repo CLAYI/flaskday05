@@ -1,0 +1,1 @@
+from flask import Flaskfrom app_03.ext import init_dbfrom app_03.settings import configfrom app_03.views import blue,init_bluedef create_app(env_name=None):    # 实例程序对象    app = Flask(__name__)    # 配置数据库环境    app.config.from_object(config.get(env_name or 'default'))    # 数据库初始化    init_db(app)    # 蓝图初始化    init_blue(app)    return app

@@ -1,0 +1,1 @@
+from app_03.ext import dbclass Student(db.Model):    id = db.Column(db.Integer, primary_key=True, autoincrement=True)    username = db.Column(db.String, nullable=False, unique=True)

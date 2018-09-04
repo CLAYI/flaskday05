@@ -1,0 +1,1 @@
+<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <title>首页</title></head><body><h1>欢迎登录,{{ user.s_name | default ('游客') }}</h1>{% if not user.session.exist %}    <a href="/login/">登录</a>{% endif %}<a href="/quit/">退出</a></body></html>

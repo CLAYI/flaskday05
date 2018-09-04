@@ -1,0 +1,1 @@
+from flask_wtf import FlaskFormfrom wtforms import StringField, SubmitField, PasswordFieldfrom wtforms.validators import DataRequiredclass LoginForm(FlaskForm):    name = StringField(label='用户名',validators=[DataRequired(message='用户名不能为空')])    password = PasswordField(label='密码',validators=[DataRequired(message='密码不能为空')])    submit = SubmitField(label='登录')

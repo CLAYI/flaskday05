@@ -1,0 +1,1 @@
+{% import "bootstrap/wtf.html" as wtf %}<h1>登录系统</h1>{% if name %}    <h1>欢迎{{ name }}登录</h1>    {% else %}    {{ msg }}{% endif %}{{ wtf.quick_form(form,action='/login') }}

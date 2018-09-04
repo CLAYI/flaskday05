@@ -1,0 +1,1 @@
+# 整合扩展的第三方插件的脚本文件from flask_migrate import Migratefrom flask_sqlalchemy import SQLAlchemy# 在ext.py脚本中不能导入manager.py中的app，会出现导包的环形循环的情况;db = SQLAlchemy()  # 创建数据库对象migrate = Migrate()  # 创建迁移模型对象def init_ext(app):    db.init_app(app)    migrate.init_app(app, db)  # 初始化迁移 (第一个参数app,第二参数db)

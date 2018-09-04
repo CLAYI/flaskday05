@@ -1,0 +1,1 @@
+from flask_script import Managerfrom app_01 import create_appfrom flask_migrate import MigrateCommandapp = create_app()  # 默认为开发环境,                    # 如果要传环境参数,则在括号中写环境参数名即可 [develop,testing,staging,product]manager = Manager(app)manager.add_command('db',MigrateCommand)if __name__ == '__main__':    manager.run()
